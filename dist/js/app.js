@@ -15,5 +15,14 @@ addIcon.addEventListener('click', addTask);
 
 // Add task
 function addTask() {
-  console.log('Clicked');
+  addIcon.style.display = 'none';
+  addInput.style.display = 'inline-block';
+
+  // Listen for user submit on add task input
+  addInput.addEventListener('keyup', function(e) {
+    if (e.keyCode === 13) {
+      console.log(addInput.value);
+      e.preventDefault();
+    }
+  });
 }
