@@ -13,7 +13,7 @@ body {
   background: linear-gradient(90deg, #333 20px, transparent 1%) center,
     linear-gradient(#333 20px, transparent 1%) center, var(--primary-color);
   background-size: 22px 22px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 h1 {
@@ -51,7 +51,11 @@ input {
 .add-div,
 .filter-div {
   display: flex;
-  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+
+.icons {
+  margin-top: 2rem;
 }
 
 .icons input {
@@ -60,7 +64,7 @@ input {
   display: none;
 }
 .collection {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .collection li {
