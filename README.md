@@ -2,7 +2,7 @@
 
 ### A todo app
 
-![iTask Screenshot](dist/img/screenshot.png = 250x250)
+![iTask Screenshot](dist/img/screenshot.png)
 
 > Some of the features this app offers
 
