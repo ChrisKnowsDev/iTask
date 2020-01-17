@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #3882e8;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +10,10 @@
 body {
   font-family: 'Nanum Gothic', sans-serif;
   line-height: 1.5;
-  background: linear-gradient(90deg, #333 20px, transparent 1%) center, linear-gradient(#333 20px, transparent 1%) center, #3882E8;
+  background: linear-gradient(90deg, #333 20px, transparent 1%) center,
+    linear-gradient(#333 20px, transparent 1%) center, var(--primary-color);
   background-size: 22px 22px;
+  font-size: 1.3rem;
 }
 
 h1 {
@@ -16,6 +22,12 @@ h1 {
 
 i {
   color: #333;
+  padding-right: 1rem;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
 }
 
 /* Utilities */
@@ -24,12 +36,59 @@ i {
 }
 
 .text-primary {
-  color: #3882E8;
+  color: var(--primary-color);
 }
 
+/* Other CSS */
 .container {
   background: #f4f4f4;
   max-width: 900px;
   margin: 10vh auto 0;
   border-radius: 5px;
+  padding: 2rem;
+}
+
+.add-div,
+.filter-div {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.icons input {
+  border: none;
+  border-bottom: 1px solid #333;
+  display: none;
+}
+.collection {
+  margin-top: 2rem;
+}
+
+.collection li {
+  display: flex;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+.collection input {
+  border: none;
+  font-size: 1.1rem;
+}
+
+.clear {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #333;
+  color: var(--primary-color);
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.clear:hover {
+  background: var(--primary-color);
+  color: #333;
+  transform: scale(1.0075);
 }
