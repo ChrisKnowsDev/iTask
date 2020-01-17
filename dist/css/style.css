@@ -9,3 +9,27 @@ body {
   background: linear-gradient(90deg, #333 20px, transparent 1%) center, linear-gradient(#333 20px, transparent 1%) center, #3882E8;
   background-size: 22px 22px;
 }
+
+h1 {
+  font-size: 3rem;
+}
+
+i {
+  color: #333;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #3882E8;
+}
+
+.container {
+  background: #f4f4f4;
+  max-width: 900px;
+  margin: 10vh auto 0;
+  border-radius: 5px;
+}
