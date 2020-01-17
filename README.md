@@ -2,6 +2,8 @@
 
 ### A todo app
 
+![iTask Screenshot](dist/img/screenshot.png = 250x250)
+
 > Some of the features this app offers
 
 - Add Item
