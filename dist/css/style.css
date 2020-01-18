@@ -99,3 +99,10 @@ input {
   color: #333;
   transform: scale(1.0075);
 }
+
+.alert {
+  background: rgb(251, 67, 67);
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
