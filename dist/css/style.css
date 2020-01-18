@@ -56,13 +56,16 @@ input {
 
 .icons {
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .icons input {
   border: none;
   border-bottom: 1px solid #333;
   display: none;
+  outline: none;
 }
+
 .collection {
   margin-top: 1rem;
 }
@@ -95,4 +98,11 @@ input {
   background: var(--primary-color);
   color: #333;
   transform: scale(1.0075);
+}
+
+.alert {
+  background: rgb(251, 67, 67);
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
 }
