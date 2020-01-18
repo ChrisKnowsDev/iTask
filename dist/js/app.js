@@ -28,12 +28,21 @@ function getUserSubmit(e) {
   let userInput = addInput.value;
   // check if user presses enter
   if (e.keyCode === 13) {
+    // Check if input is empty on submit and if so alert
+    if (addInput.value === '') {
+      alert('Error');
+    }
+
     addInput.value = '';
     addIcon.style.display = 'inline-block';
     addInput.style.display = 'none';
 
     // Create li and inner html
     createLi(userInput);
+
+    // Add one to task count and update task amount
+    taskCount += 1;
+    taskAmount.textContent = taskCount;
 
     e.preventDefault();
   }
