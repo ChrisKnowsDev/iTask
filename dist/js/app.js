@@ -10,8 +10,17 @@ const taskAmount = document.querySelector('.amount'),
 // App Vars
 let taskCount = 0;
 
-// Listen for user submit add task
-addIcon.addEventListener('click', addTask);
+// Load all event listeners
+loadAllEventListeners();
+
+// All event listeners loaded into one function and called above
+function loadAllEventListeners() {
+  // Listen for user submit add task
+  addIcon.addEventListener('click', addTask);
+
+  // Listen for delete task
+  list.addEventListener('click', deleteTask);
+}
 
 // Add task
 function addTask() {
@@ -90,5 +99,13 @@ function showAlert(msg) {
   // Timeout after 2secs
   setTimeout(() => {
     document.querySelector('.alert').remove();
-  }, 1000);
+  }, 2000);
+}
+
+// Delete Task
+function deleteTask(e) {
+  if (e.target.classList.contains('fa-trash')) {
+    if (confirm('You sure you want to delete this task?'))
+      e.target.parentElement.parentElement.remove();
+  }
 }

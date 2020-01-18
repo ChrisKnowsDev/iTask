@@ -30,6 +30,10 @@ input {
   width: 100%;
 }
 
+a {
+  cursor: pointer;
+}
+
 /* Utilities */
 .text-center {
   text-align: center;
