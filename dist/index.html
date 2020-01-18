@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/69d25c3dbf.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Local CSS File -->
-    <link rel="stylesheet" href="css/style.css" />
-    <title>iTask</title>
-  </head>
 
-  <body>
-    <div class="container">
-      <!-- Header -->
-      <header>
-        <h1 class="text-center">i<span class="text-primary">Task</span></h1>
-        <p class="text-center">
-          You Have <span class="amount">3</span> Things To Do
-        </p>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/69d25c3dbf.js" crossorigin="anonymous"></script>
+  <!-- Local CSS File -->
+  <link rel="stylesheet" href="css/style.css" />
+  <title>iTask</title>
+</head>
 
-      <!-- Icons -->
-      <div class="icons">
-        <div class="add-div">
-          <i class="fas fa-plus"></i>
-          <input type="text" id="add-task" placeholder="Enter Task" />
-        </div>
-        <div class="filter-div">
-          <i class="fas fa-filter"></i>
-          <input type="text" id="filter-tasks" />
-        </div>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1 class="text-center">i<span class="text-primary">Task</span></h1>
+      <p class="text-center">
+        You Have <span class="amount">3</span> Things To Do
+      </p>
+    </header>
+
+    <!-- Icons -->
+    <div class="icons">
+      <div class="add-div">
+        <i class="fas fa-plus"></i>
+        <input type="text" id="add-task" placeholder="Enter Task" />
       </div>
-
-      <!-- To Do List -->
-      <ul class="collection">
-        <li>
-          <input type="text" value="Pay Bills" /><i
-            class="fas fa-pencil-alt"
-          ></i
-          ><i class="fas fa-trash"></i>
-        </li>
-        <li>
-          <input type="text" value="Buy Groceries" /><i
-            class="fas fa-pencil-alt"
-          ></i
-          ><i class="fas fa-trash"></i>
-        </li>
-        <li>
-          <input type="text" value="Walk Dogs" /><i
-            class="fas fa-pencil-alt"
-          ></i
-          ><i class="fas fa-trash"></i>
-        </li>
-      </ul>
-
-      <!-- Clear All -->
-      <div class="clear-all">
-        <button class="clear">Clear All</button>
+      <div class="filter-div">
+        <i class="fas fa-filter"></i>
+        <input type="text" id="filter-tasks" />
       </div>
     </div>
 
-    <!-- Local JS File -->
-    <script src="js/app.js"></script>
-  </body>
+    <!-- To Do List -->
+    <ul class="collection">
+      <!-- Placeholder li's while creating UI -->
+      <!-- <li>
+        <input type="text" value="Pay Bills" /><a href="#"><i class="fas fa-pencil-alt"></i></a><a href="#"><i
+            class="fas fa-trash"></i></a>
+      </li>
+      <li>
+        <input type="text" value="Wash Dishes" /><a href="#"><i class="fas fa-pencil-alt"></i></a><a href="#"><i
+            class="fas fa-trash"></i></a>
+      </li>
+      <li>
+        <input type="text" value="Walk Dogs" /><a href="#"><i class="fas fa-pencil-alt"></i></a><a href="#"><i
+            class="fas fa-trash"></i></a>
+      </li> -->
+    </ul>
+
+    <!-- Clear All -->
+    <div class="clear-all">
+      <button class="clear">Clear All</button>
+    </div>
+  </div>
+
+  <!-- Local JS File -->
+  <script src="js/app.js"></script>
+</body>
+
 </html>
