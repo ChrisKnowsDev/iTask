@@ -123,12 +123,17 @@ function deleteTask(e) {
 function editTask(e) {
   let input = e.target.parentElement.parentElement.firstChild;
   input.focus();
-  input.textContent = input.value;
+  input.addEventListener('keyup', function(e) {
+    if (e.keyCode === 13) {
+      input.blur();
+    }
+  });
 }
 
 // Clear tasks
 function clearTasks() {
   if (confirm('You sure, this will delete your entire list?')) {
     list.remove();
+    taskAmount.textContent = 0;
   }
 }
