@@ -20,6 +20,12 @@ function loadAllEventListeners() {
 
   // Listen for delete task
   list.addEventListener('click', deleteTask);
+
+  // Listen for edit task
+  list.addEventListener('click', editTask);
+
+  // Listen for clear tasks
+  clearBtn.addEventListener('click', clearTasks);
 }
 
 // Add task
@@ -107,5 +113,22 @@ function deleteTask(e) {
   if (e.target.classList.contains('fa-trash')) {
     if (confirm('You sure you want to delete this task?'))
       e.target.parentElement.parentElement.remove();
+    // Subtract one to task count and update task amount
+    taskCount -= 1;
+    taskAmount.textContent = taskCount;
+  }
+}
+
+// Edit Tasks
+function editTask(e) {
+  let input = e.target.parentElement.parentElement.firstChild;
+  input.focus();
+  input.textContent = input.value;
+}
+
+// Clear tasks
+function clearTasks() {
+  if (confirm('You sure, this will delete your entire list?')) {
+    list.remove();
   }
 }
