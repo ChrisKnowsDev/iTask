@@ -20,6 +20,12 @@ function loadAllEventListeners() {
 
   // Listen for delete task
   list.addEventListener('click', deleteTask);
+
+  // Listen for edit task
+  list.addEventListener('click', editTask);
+
+  // Listen for clear tasks
+  clearBtn.addEventListener('click', clearTasks);
 }
 
 // Add task
@@ -107,5 +113,29 @@ function deleteTask(e) {
   if (e.target.classList.contains('fa-trash')) {
     if (confirm('You sure you want to delete this task?'))
       e.target.parentElement.parentElement.remove();
+    // Subtract one to task count and update task amount
+    taskCount -= 1;
+    taskAmount.textContent = taskCount;
+  }
+}
+
+// Edit Tasks
+function editTask(e) {
+  let input = e.target.parentElement.parentElement.firstChild;
+  input.focus();
+  input.addEventListener('keyup', function(e) {
+    if (e.keyCode === 13) {
+      input.blur();
+    }
+  });
+}
+
+// Clear tasks
+function clearTasks(e) {
+  if (confirm('You sure, this will delete everything?')) {
+    while (list.firstChild) {
+      list.firstChild.remove();
+      taskAmount.textContent = 0;
+    }
   }
 }
