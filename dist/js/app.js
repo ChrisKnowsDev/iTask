@@ -131,9 +131,11 @@ function editTask(e) {
 }
 
 // Clear tasks
-function clearTasks() {
-  if (confirm('You sure, this will delete your entire list?')) {
-    list.remove();
-    taskAmount.textContent = 0;
+function clearTasks(e) {
+  if (confirm('You sure, this will delete everything?')) {
+    while (list.firstChild) {
+      list.firstChild.remove();
+      taskAmount.textContent = 0;
+    }
   }
 }

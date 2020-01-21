@@ -97,6 +97,8 @@ a {
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  max-width: 50%;
+  margin: auto;
 }
 
 .clear:hover {
@@ -110,4 +112,10 @@ a {
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    margin: 10vh 1rem 0;
+  }
 }
